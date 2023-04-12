@@ -1,16 +1,21 @@
 <template>
-  <header class="header-nav container">
-      <div class="header-nav__content">
-        <router-link to="/" class="header-nav__logo">
-          <icon name="logo" />
-          <span>coinrule</span>
-        </router-link>
-        <div class="header-nav__actions">
-          <router-link to="#" >Pricing</router-link>
-          <router-link to="#" >Log In</router-link>
-          <router-link to="#" >Get Started</router-link>
-        </div>
-      </div>
+  <header class="header-nav">
+    <div class="container">
+      <router-link to="/" class="header-nav__logo">
+        <icon name="logo" /> coinrule
+      </router-link>
+      <ul class="header-nav__actions">
+        <li>
+          <router-link to="#">Pricing</router-link>
+        </li>
+        <li>
+          <router-link to="#">Log In</router-link>
+        </li>
+        <li>
+          <router-link to="#" class="bordered">Get Started</router-link>
+        </li>
+      </ul>
+    </div>
   </header>
 </template>
 
@@ -25,42 +30,45 @@ export default {
 
 <style scoped lang="scss">
 .header-nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
   height: 94px;
-  &__content {
-    width: 100%;
+  .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: inherit;
   }
   a {
     color: #FFF;
+    &.bordered {
+      padding: 14.5px 30.44px 14.5px 31px;
+      border-radius: 100px;
+      border: 2px solid #FFFFFF;
+    }
   }
   &__logo {
     display: flex;
     align-items: center;
     gap: 25px;
-    span {
-      letter-spacing: 2.24px;
-      text-transform: uppercase;
-      font-weight: 500;
-      font-size: 30px;
-      line-height: 30px;
-      padding-top: 8px;
-    }
+    letter-spacing: 2.24px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
   }
   &__actions {
-    a {
-      font-weight: 300;
-      font-size: 18px;
-      line-height: 27px;
-      text-transform: capitalize;
-      & + a {
+    li {
+      display: inline-block;
+      & + li {
         margin-left: 44px;
       }
+      a {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 27px;
+        text-transform: capitalize;
+      }
     }
+
   }
 }
 </style>
