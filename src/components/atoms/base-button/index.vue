@@ -1,7 +1,7 @@
 <template>
   <component
       class="base-button"
-      :class="[type, size]"
+      :class="[variant, size]"
       :is="component"
       :href="href"
       v-bind="$attrs"
@@ -35,11 +35,11 @@ export default {
         return ['sm', 'md', 'lg', 'xl'].includes(value)
       }
     },
-    type: {
+    variant: {
       type: String,
       default: 'default',
       validator(value) {
-        return ['default', 'primary', 'secondary'].includes(value)
+        return ['default', 'primary', 'secondary', 'outlined', 'danger', "outlined_gray"].includes(value)
       }
     },
     prependIcon: {

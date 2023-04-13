@@ -53,17 +53,22 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-
 .mobile {
   display: none !important;
 
   @media screen and (max-width: 768px) {
-    display: flex !important;
+    display: block !important;
+  }
+}
+
+.tablet {
+  @media screen and (max-width: 1024px){
+    display: none !important;
   }
 }
 
 .desktop {
-  @media screen and (max-width: 1025px) {
+  @media screen and (min-width: 1025px) {
     display: none !important;
   }
 }

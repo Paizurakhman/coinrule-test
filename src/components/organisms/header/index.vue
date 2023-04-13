@@ -4,7 +4,7 @@
       <router-link to="/" class="header-nav__logo">
         <icon name="logo" /> coinrule
       </router-link>
-      <ul class="header-nav__actions">
+      <ul class="header-nav__actions tablet">
         <li>
           <router-link to="#">Pricing</router-link>
         </li>
@@ -12,10 +12,7 @@
           <router-link to="#">Log In</router-link>
         </li>
         <li>
-          <base-button>Get Started</base-button>
-        </li>
-        <li>
-          <base-button prepend-icon="lock">https://web.coinrule.com</base-button>
+          <base-button variant="outlined" href="#">Get Started</base-button>
         </li>
       </ul>
     </div>
@@ -58,6 +55,13 @@ export default {
     font-weight: 500;
     font-size: 30px;
     line-height: 30px;
+    @media screen and (max-width: 1024px){
+      font-size: 25px;
+      gap: 15px;
+      svg {
+        transform: scale(0.75);
+      }
+    }
   }
   &__actions {
     li {
