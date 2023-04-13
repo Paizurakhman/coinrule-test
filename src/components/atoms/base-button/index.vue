@@ -12,7 +12,7 @@
   </component>
 </template>
 
-<script>
+<script lang="ts">
 import {computed} from "vue";
 import Icon from "@/components/atoms/icon/index.vue";
 
