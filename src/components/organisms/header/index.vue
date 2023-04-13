@@ -12,7 +12,10 @@
           <router-link to="#">Log In</router-link>
         </li>
         <li>
-          <router-link to="#" class="bordered">Get Started</router-link>
+          <base-button>Get Started</base-button>
+        </li>
+        <li>
+          <base-button prepend-icon="lock">https://web.coinrule.com</base-button>
         </li>
       </ul>
     </div>
@@ -21,10 +24,11 @@
 
 <script>
 import Icon from "@/components/atoms/icon/index.vue";
+import BaseButton from "@/components/atoms/base-button/index.vue";
 
 export default {
   name: "HeaderNav",
-  components: {Icon}
+  components: {BaseButton, Icon}
 }
 </script>
 

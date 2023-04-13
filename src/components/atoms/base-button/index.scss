@@ -1,0 +1,51 @@
+.base-button {
+  min-width: 64px;
+  padding: 0 16px;
+  align-items: center;
+  display: inline-grid;
+  grid-template-areas: "prepend content append";
+  grid-template-columns: max-content auto max-content;
+  font-weight: bolder;
+  justify-content: center;
+  max-width: 100%;
+  outline: none;
+  border-color: transparent;
+  background-color: transparent;
+  color: #FFFFFF;
+  position: relative;
+  user-select: none;
+  vertical-align: middle;
+  height: 36px;
+  cursor: pointer;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+  &:hover{
+    background-position: right;
+  }
+  &__prepend {
+    grid-area: prepend;
+    margin-inline-start: -5px;
+    margin-inline-end: 10px;
+  }
+  &__content {
+    grid-area: content;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  &__append {
+    grid-area: append;
+    margin-inline-start: 10px;
+    margin-inline-end: -5px;
+  }
+  &.md {
+    height: 45px;
+  }
+  &.default {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 100px;
+    color: #192A3E;
+    font-weight: 500;
+    background-size: 200%;
+
+  }
+}
